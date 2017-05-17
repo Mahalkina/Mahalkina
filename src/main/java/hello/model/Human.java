@@ -1,57 +1,58 @@
 package hello.model;
 
-/**
- * Created by Ekaterina on 03.05.2017.
- */
 import javax.persistence.*;
 
-/**
- * Created by jskonst on 19.04.17.
- */
 @Entity
-@Table(name="HumanAll")
+@Table(name = "HumanAll")
 public class Human {
     @Id
-    @GeneratedValue(strategy= GenerationHuman.AUTO)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer n_human;
 
-    @Column(name="human")
+    @Column(name = "human")
     private String name;
     private String surname;
     private String otchestvo;
     private String address;
 
 
-
-    public Integer getId() {
-        return id;
+    public Integer getN_human() {
+        return n_human;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId(Integer n_human) {
+        this.n_human = n_human;
     }
 
-    public String Human() {
+    public String getName() {
         return name;
     }
 
-    public void setHuman(String typename) {
-        this.surname = typename;
+    public void setName(String Name) {
+        this.name = name;
     }
 
-    public String getPicture() {
-        return picture;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setPicture(String picture) {
-        this.picture = picture;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
-    public float getRadius() {
-        return radius;
+    public String getOtchestvo() {
+        return otchestvo;
     }
 
-    public void setRadius(float radius) {
-        this.radius = radius;
+    public void setOtchestvo(String otchestvo) {
+        this.otchestvo = otchestvo;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
