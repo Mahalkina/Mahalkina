@@ -15,12 +15,11 @@ public class Human {
     private String otchestvo;
     private String address;
 
-
     public Integer getN_human() {
         return n_human;
     }
 
-    public void setId(Integer n_human) {
+    public void setN_human(Integer n_human) {
         this.n_human = n_human;
     }
 
@@ -28,7 +27,7 @@ public class Human {
         return name;
     }
 
-    public void setName(String Name) {
+    public void setName(String name) {
         this.name = name;
     }
 

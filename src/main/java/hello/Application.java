@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 //@SpringBootApplication
 public class Application {
     @Autowired
-    private HumanRepository HumanRepository ;
+    private HumanRepository humanRepository ;
     private static final Logger log = LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) {
