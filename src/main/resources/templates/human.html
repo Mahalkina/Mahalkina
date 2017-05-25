@@ -5,10 +5,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<h1>Human</h1>
+<h1>Человек</h1>
 <form action="#" th:action="@{/demo/human}" th:object="${human}" method="post">
     <p>Id: <input type="text" th:field="*{n_human}" /></p>
-    <p>Message: <input type="text" th:field="*{name}" /></p>
+    <p>Имя: <input type="text" th:field="*{name}" /></p>
+    <p>Фамилия: <input type="text" th:field="*{surname}" /></p>
+    <p>Отчество: <input type="text" th:field="*{otchestvo}" /></p>
+    <p>Адрес: <input type="text" th:field="*{address}" /></p>
     <p><input type="submit" value="Submit" /> <input type="Reset" value="Reset" /></p>
 </form>
 </body>

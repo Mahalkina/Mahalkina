@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handing Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Abonent</h1>
+<form action="#" th:action="@{/demo1/abonent}" th:object="${abonent}" method="post">
+    <p>Id: <input type="text" th:field="*{n_abonenta}" /></p>
+    <p>n_human: <input type="text" th:field="*{n_human}" /></p>
+    <p>god_ystanovki_phone: <input type="text" th:field="*{god_ystanovki_phone}" /></p>
+    <p>stoimost_abonentskoy_plati: <input type="text" th:field="*{stoimost_abonentskoy_plati}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="Reset" value="Reset" /></p>
+</form>
+</body>
+</html>

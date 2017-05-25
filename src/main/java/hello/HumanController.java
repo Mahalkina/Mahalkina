@@ -1,6 +1,5 @@
 package hello;
 
-import hello.model.Human;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,18 +15,18 @@ public class HumanController {
     private HumanRepository humanRepository;
 
 
-//    @RequestMapping("/list")
-//    public String human (Model model) {
-//        model.addAttribute("humans", humanRepository.findAll());
-//        return "humans";
-//    }
+    @RequestMapping("/list")
+    public String human (Model model) {
+        model.addAttribute("human", humanRepository.findAll());
+        return "human";
+    }
 
     @RequestMapping("/add")
     public @ResponseBody
-    String add(@RequestParam(value = "name", required = true) String name,
-               @RequestParam(value = "surname", required = true) String surname,
-               @RequestParam(value = "otchestvo", required = true ) String otchestvo,
-               @RequestParam(value = "address", required = true ) String address,
+    String add(@RequestParam(value = "name", required = false) String name,
+               @RequestParam(value = "surname", required = false) String surname,
+               @RequestParam(value = "otchestvo", required = false ) String otchestvo,
+               @RequestParam(value = "address", required = false ) String address,
              Model model)
  {
         Human n = new Human();
@@ -38,15 +37,7 @@ public class HumanController {
 
         humanRepository.save(n);
         return "Saved";
-//    String add(@RequestParam String name, @RequestParam String surname, @RequestParam String otchestvo, @RequestParam String address) {
-//        Human n = new Human();
-//        n.setName(name);
-//        n.setSurname(surname);
-//        n.setOtchestvo(otchestvo);
-//        n.setAddress(address);
-//
-//        humanRepository.save(n);
-//        return "Saved";
+
     }
     @RequestMapping("/all")
     public @ResponseBody Iterable<Human> getAllHuman(){
